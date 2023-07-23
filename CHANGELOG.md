@@ -1,7 +1,7 @@
-## 1.0.1 - 1.0.2
+## 1.0.1 - 1.0.3
 
-- Fix readme
+- Fix readme, changelog
 
-- ## 1.0.0
+## 1.0.0
 
 - Initial release
