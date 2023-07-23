@@ -1,0 +1,21 @@
+name: isbn
+description: A library for parsing, validating, and generating ISBN codes easily. Supports ISBN-10 and ISBN-13 formats.
+
+version: 1.0.0
+repository: https://github.com/0xdir/isbn
+
+funding:
+  - https://github.com/sponsors/0xdir
+topics:
+  - data
+  - isbn
+  - books
+  - metadata
+  - standards
+
+environment:
+  sdk: ^3.0.0
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
