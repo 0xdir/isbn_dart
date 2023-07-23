@@ -1,8 +1,8 @@
 name: isbn
 description: A library for parsing, validating, and generating ISBN codes easily. Supports ISBN-10 and ISBN-13 formats.
 
-version: 1.0.0
-repository: https://github.com/0xdir/isbn
+version: 1.0.1
+repository: https://github.com/0xdir/isbn_dart
 
 funding:
   - https://github.com/sponsors/0xdir
