@@ -160,37 +160,37 @@ void main() {
   });
 
   test('Should get canonical ISBN', () {
-    expect(isbn.getCanonical('0826497527', output: 'both'), '0826497527');
-    expect(isbn.getCanonical('0826497527', output: 'isbn10'), '0826497527');
-    expect(isbn.getCanonical('0826497527', output: 'isbn13'), '9780826497529');
-    expect(isbn.getCanonical('ISBN 0826497527', output: 'isbn13'),
-        '9780826497529');
-    expect(isbn.getCanonical('ISBN 0826497527', output: 'ERR'), '');
-    expect(isbn.getCanonical('0826497520', output: 'both'), '');
-    expect(isbn.getCanonical('9780826497529', output: 'both'), '9780826497529');
-    expect(isbn.getCanonical('9780826497520', output: 'both'), '');
-    expect(isbn.getCanonical('OSX 9780826497529.pdf', output: 'both'),
+    expect(isbn.toCanonical('0826497527', output: 'both'), '0826497527');
+    expect(isbn.toCanonical('0826497527', output: 'isbn10'), '0826497527');
+    expect(isbn.toCanonical('0826497527', output: 'isbn13'), '9780826497529');
+    expect(
+        isbn.toCanonical('ISBN 0826497527', output: 'isbn13'), '9780826497529');
+    expect(isbn.toCanonical('ISBN 0826497527', output: 'ERR'), '');
+    expect(isbn.toCanonical('0826497520', output: 'both'), '');
+    expect(isbn.toCanonical('9780826497529', output: 'both'), '9780826497529');
+    expect(isbn.toCanonical('9780826497520', output: 'both'), '');
+    expect(isbn.toCanonical('OSX 9780826497529.pdf', output: 'both'),
         '9780826497529');
 
     /// invalid ISBN 13
-    expect(isbn.getCanonical('9789720404427'), '');
-    expect(isbn.getCanonical('isbn 9789720404427'), '');
-    expect(isbn.getCanonical('ISBN 9789720404427'), '');
+    expect(isbn.toCanonical('9789720404427'), '');
+    expect(isbn.toCanonical('isbn 9789720404427'), '');
+    expect(isbn.toCanonical('ISBN 9789720404427'), '');
 
     /// valid ISBNs
-    expect(isbn.getCanonical('ISBN-9780826497529'), '9780826497529');
-    expect(isbn.getCanonical('ISBN9780826497529'), '9780826497529');
-    expect(isbn.getCanonical('isbn9780826497529'), '9780826497529');
-    expect(isbn.getCanonical('isbn 0826497527'), '0826497527');
-    expect(isbn.getCanonical('ISBN 0826497527'), '0826497527');
-    expect(isbn.getCanonical('ISBN-0826497527'), '0826497527');
-    expect(isbn.getCanonical('954430603x'), '954430603X');
-    expect(isbn.getCanonical('95443060x3'), '');
-    expect(isbn.getCanonical('0000000000'), '');
-    expect(isbn.getCanonical('000000000X'), '');
-    expect(isbn.getCanonical('0000000000000'), '');
-    expect(isbn.getCanonical('0000000'), '');
-    expect(isbn.getCanonical(''), '');
+    expect(isbn.toCanonical('ISBN-9780826497529'), '9780826497529');
+    expect(isbn.toCanonical('ISBN9780826497529'), '9780826497529');
+    expect(isbn.toCanonical('isbn9780826497529'), '9780826497529');
+    expect(isbn.toCanonical('isbn 0826497527'), '0826497527');
+    expect(isbn.toCanonical('ISBN 0826497527'), '0826497527');
+    expect(isbn.toCanonical('ISBN-0826497527'), '0826497527');
+    expect(isbn.toCanonical('954430603x'), '954430603X');
+    expect(isbn.toCanonical('95443060x3'), '');
+    expect(isbn.toCanonical('0000000000'), '');
+    expect(isbn.toCanonical('000000000X'), '');
+    expect(isbn.toCanonical('0000000000000'), '');
+    expect(isbn.toCanonical('0000000'), '');
+    expect(isbn.toCanonical(''), '');
   });
 
   test('Should convert to ean13', () {

@@ -42,7 +42,7 @@ void main() {
   print(isbn.getIsbnFromString(text, level: 'normal'));
 
   /// Get convert a string to its canonical ISBN representation
-  print(isbn.getCanonical('978-03126-4058-3'));
+  print(isbn.toCanonical('978-03126-4058-3'));
 
   /// Get convert a string to EAN13 format
   print(isbn.toEAN13('978-03126-4058-3'));

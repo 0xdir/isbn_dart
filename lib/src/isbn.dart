@@ -45,8 +45,8 @@ class Isbn {
 
   /// Convert a [candidate] string into canonical ISBN format
   /// Returns empty string if candidate is invalid
-  String getCanonical(
-    /// The candidate to parse
+  String toCanonical(
+    /// The [candidate] to parse
     String candidate, {
     /// The desired [output]. Options: [isbn10, isbn13, both].
     String output = 'both',

@@ -27,9 +27,9 @@ void main() {
       'also works: isbn 978031264058 3';
   print(isbn.getIsbnFromString(text, level: 'normal'));
 
-  /// Get convert a string to its canonical ISBN representation
-  print(isbn.getCanonical('978-03126-4058-3'));
+  /// Convert a string to its canonical ISBN representation
+  print(isbn.toCanonical('978-03126-4058-3'));
 
-  /// Get convert a string to EAN13 format
+  /// Convert convert a string to EAN13 format
   print(isbn.toEAN13('978-03126-4058-3'));
 }
